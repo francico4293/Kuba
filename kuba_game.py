@@ -7,7 +7,7 @@ import copy
 
 
 class KubaGame(object):
-    """"""
+    """Represents the board game Kuba."""
     def __init__(self) -> None:
         """Initializes pygame modules and creates a KubaGame object with board, running, and selected attributes. The
         board attribute initializes the game Board. The running attribute is True while the game is running and False
