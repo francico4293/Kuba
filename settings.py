@@ -17,7 +17,7 @@ RED = (255, 0, 0)
 # marble positioning / size
 MARBLE_RADIUS = 40
 
-# TODO: Is there a better way to do this?
+# board and marble positioning:
 MARBLE_POSITIONS = [[],
                     [],
                     [],

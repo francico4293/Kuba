@@ -31,12 +31,6 @@ class KubaGame(object):
                 if event.type == pygame.QUIT:
                     self._running = False
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    if (255 <= pygame.mouse.get_pos()[0] <= 355 and 65 <= pygame.mouse.get_pos()[1] <= 95) and \
-                            self._mode_selected is False:
-                        self._mode_selected = True
-                    elif (400 <= pygame.mouse.get_pos()[0] <= 500 and 65 <= pygame.mouse.get_pos()[1] <= 95) and \
-                            self._mode_selected is False:
-                        self._mode_selected = True
                     # row 1
                     if (BOARD_POSITIONS[0][0][0] <= pygame.mouse.get_pos()[0] < BOARD_POSITIONS[0][1][0]) and \
                             (BOARD_POSITIONS[0][0][1] <= pygame.mouse.get_pos()[1] < BOARD_POSITIONS[1][0][1]):
