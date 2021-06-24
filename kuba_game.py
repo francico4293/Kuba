@@ -1,6 +1,6 @@
 # Author: Colin Francis
-# Date: 6/3/2021
-
+# Description: This file contains all logic used to play the game of Kuba. This file also contains all logic used
+#   to configure and update the game board using Pygame.
 import pygame
 from settings import *
 import copy
@@ -651,7 +651,7 @@ class KubaGame(object):
 class Board(object):
     """Represents a Board to play the game Kuba on."""
     def __init__(self) -> None:
-        """"""
+        """Creates a Board object."""
         pygame.display.set_caption("Kuba")
         self._screen = pygame.display.set_mode(GAME_SCREEN)
         self._marbles_on_board = [Marble(WHITE, MARBLE_POSITIONS[0][0]), Marble(WHITE, MARBLE_POSITIONS[0][1]),
@@ -801,7 +801,9 @@ class Marble(object):
 
 
 class Player(object):
+    """Represents a Player in a game of Kuba."""
     def __init__(self, color: tuple, color_text: str) -> None:
+        "Creates a Player object."
         self._color = color
         self._color_text = color_text
         self._captures = 0
@@ -820,16 +822,13 @@ class Player(object):
         return self._captures
 
     def get_previous_configuration(self):
+        """Returns the previous configuration of the game board."""
         return self._previous_configuration
 
     def set_previous_configuration(self, previous_configuration):
+        """Sets the previous configuration of the game board."""
         self._previous_configuration = previous_configuration
 
     def capture(self):
         """Increments the number of red marbles captured by the Player by 1."""
         self._captures += 1
-
-
-if __name__ == "__main__":
-    kuba = KubaGame()
-    kuba.play()

@@ -1,5 +1,4 @@
 # Author: Colin Francis
-# Date: 5/29/2021
 # Description: This file contains any game settings / constant values used in Kuba.
 
 # dimensions:
